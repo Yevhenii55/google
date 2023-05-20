@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Font Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Google</title>
+    <script>
+      function redirectToFirstSearchResult() {
+        const searchQuery = document.querySelector('.search input[name="q"]').value;
+        const url = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI`;
+        window.location.href = url;
+      }
+      function redirectToSearchResults() {
+      const searchQuery = document.querySelector('.search input[name="q"]').value;
+      const url = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+      window.location.href = url;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__right">
+        <a class="images" href="images.html">Картинки</a>
+        <a href=https://www.google.com/advanced_search?hl=uk>Розширений пошук</a>
+        <span class="material-icons header__apps"> apps </span>
+        <span class="material-icons"> account_circle </span>
+      </div>
+    </div>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="mainBody">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo"/>
+
+      <!-- Search Starts -->
+      <form action="https://google.com/search" method="get" class="search">
+        <div class="search__input">
+          <span class="material-icons">search</span>
+          <input class="text" type="text" name="q" placeholder="Введіть пошуковий запит або URL">
+          <span class="material-icons">mic</span>
+        </div>
+      </form>  
+        <div class="search__buttons">
+          <button onclick="redirectToSearchResults()" type="submit">Пошук Google</button>
+          <button onclick="redirectToFirstSearchResult()">Мені пощастить!</button>
+        </div>  
+  </body>
+</html>
